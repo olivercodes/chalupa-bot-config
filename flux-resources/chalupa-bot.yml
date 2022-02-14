@@ -1,0 +1,29 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: chalupa-bot
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: ssh://git@github.com/olivercodes/chalupa-bot.git
+  secretRef:
+    name: git-clone
+  ref:
+    branch: main
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: chalupa-bot
+  namespace: flux-system
+spec:
+  image: ghcr.io/olivercodes/chalupa-bot
+  interval: 30s
+  accessFrom:
+    namespaceSelectors:
+      - matchLabels:
+          kubernetes.io/metadata.name: flux-system
+      - matchLabels:
+          kubernetes.io/metadata.name: chalupa-bot-prod
+      - matchLabels:
+          kubernetes.io/metadata.name: chalupa-bot-staging
