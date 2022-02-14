@@ -6,7 +6,7 @@ metadata:
 spec:
   images:
   - name: ghcr.io/olivercodes/chalupa-bot
-    newTag: ghcr.io/olivercodes/chalupa-bot:main-27252276-1644799757 # {"$imagepolicy": "flux-system:chalupa-bot-prod:tag"}
+    newTag: main-27252276-1644799757 # {"$imagepolicy": "flux-system:chalupa-bot-prod:tag"}
   interval: 1m
   path: "./manifests"
   prune: true
