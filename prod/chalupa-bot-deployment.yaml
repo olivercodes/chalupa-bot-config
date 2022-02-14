@@ -1,4 +1,4 @@
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2 
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: chalupa-bot-prod
@@ -6,7 +6,7 @@ metadata:
 spec:
   images:
   - name: ghcr.io/olivercodes/chalupa-bot
-    newTag: v0.0.1 # {"$imagepolicy": "flux-system:chalupa-bot-prod"}
+    newTag: ghcr.io/olivercodes/chalupa-bot:main-102d430e-1644795160 # {"$imagepolicy": "flux-system:chalupa-bot-prod"}
   interval: 1m
   path: "./manifests"
   prune: true
