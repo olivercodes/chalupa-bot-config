@@ -14,5 +14,5 @@ spec:
   targetNamespace: chalupa-bot-prod
   sourceRef:
     kind: GitRepository
-    name: chalupa-bot
+    name: chalupa-bot-repo
     namespace: flux-system
