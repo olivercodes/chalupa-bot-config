@@ -14,5 +14,5 @@ spec:
   targetNamespace: chalupa-bot-staging
   sourceRef:
     kind: GitRepository
-    name: chalupa-bot-config
+    name: chalupa-bot
     namespace: flux-system
