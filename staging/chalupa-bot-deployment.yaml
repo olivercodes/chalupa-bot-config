@@ -5,8 +5,9 @@ metadata:
   namespace: flux-system
 spec:
   images:
-  - name: ghcr.io/olivercodes/chalupa-bot
+  - name: ghcr.io/olivercodes/chalupa-bot 
     newTag: v0.0.1 # {"$imagepolicy": "flux-system:chalupa-bot-staging:tag"}
+    newName: ghcr.io/olivercodes/chalupa-bot # {"$imagepolicy": "flux-system:chalupa-bot-staging:name"}
   interval: 1m
   path: "./manifests"
   prune: true
