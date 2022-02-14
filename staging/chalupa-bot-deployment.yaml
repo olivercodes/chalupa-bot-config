@@ -6,7 +6,7 @@ metadata:
 spec:
   images:
   - name: ghcr.io/olivercodes/chalupa-bot
-    newTag: v0.0.1 # {"$imagepolicy": "flux-system:chalupa-bot-staging"}
+    newTag: v0.0.1 # {"$imagepolicy": "flux-system:chalupa-bot-staging:tag"}
   interval: 1m
   path: "./staging"
   prune: true
